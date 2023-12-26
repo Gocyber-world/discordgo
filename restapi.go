@@ -218,7 +218,6 @@ func (s *Session) RequestWithLockedBucket(method, urlStr, contentType string, b 
 
 	// TODO: Make a configurable static variable.
 	req.Header.Set("User-Agent", s.UserAgent)
-	fmt.Println("Request - User-Agent", s.UserAgent)
 
 	cfg := newRequestConfig(s, req)
 	for _, opt := range options {
